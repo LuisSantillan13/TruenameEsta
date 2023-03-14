@@ -11,10 +11,14 @@
 </head>
 <body>
     <div class="container">
-        <button id="back" onclick="volver()"><img src="https://cdn-icons-png.flaticon.com/512/1/1453.png"></button>
         <section id="login">
             
-           <header><h1><%=encabezado%> </h1></header>
+           <header>
+                <h1>
+                    <%=encabezado%>
+                    <a href="/"><img src="https://cdn-icons-png.flaticon.com/512/1/1453.png" alt=""></a> 
+                </h1>
+            </header>
            <br><br>
            <form action="/logueado" method="post" class="form">
             <div class="form-group">
