@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/DT.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="/public/js/main.js"></script>
+    <title><%=titulo%></title>
+</head>
+<body>
+    <div class="container">
+        <button id="back" onclick="volver()"><img src="https://cdn-icons-png.flaticon.com/512/1/1453.png"></button>
+        <section id="login">
+            
+           <header><h1><%=encabezado%> </h1></header>
+           <br><br>
+           <form action="/logueado" method="post" class="form">
+            <div class="form-group">
+            <div id="labels">
+                <label for="" class="form-label">Usuario </label>
+                <br>
+                <label for="" class="form-label">Contraseña </label>
+            </div>
+            <div id="inputs">
+                <input type="text" name="Usuario" id="Usuario" class="form-control" placeholder="Captura tu usuario" required="true">
+                <br>
+                <input type="password" name="Contraseña" id="Contraseña" class="form-control" required="true">
+            </div>
+            </div>  
+            <br>
+            <input type="submit" value="Entrar">
+           </form>
+           <br>
+           <a href="/recu">¿Olvidaste tu contraseña?</a>
+           <br>
+           <a>¿No tienes cuenta?</a><a><button onclick="regi()">Registrate</button></a>
+        </section>
+        <section id="registro">
+            <center>
+            <header>
+                <h1>Registro</h1>
+            </header>
+            </center>
+            
+            <form action="/registro" method="post" class="form" id="regis">
+                <div id="form">
+                    <div id="pe">
+                        <h4>Datos personales</h4> 
+                        <br>
+                        <div class="form-group">
+                            <div id="labels">
+                                <label for="" class="form-label">Nombre(s)</label> 
+                                <br>
+                                <label for="" class="form-label">Apellido(s)</label>
+                                <br>
+                                <label for="" class="form-label">Fecha de nacimiento</label>
+                                <br>
+                                <label for="" class="form-label">Numero de telefono</label>
+                            </div>
+                            <div id="inputs">
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ejemplo: Luis">
+                                <br>
+                                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ejemplo: Chavez">
+                                <br>
+                                <input type="date" class="form-control" name="nacimiento" id="nacimiento">
+                                <br>
+                                <input type="number" class="form-control" name="telefono" id="telefono" >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="us">
+                        <h4>Datos de usuario</h4>
+                        <br>
+                        <div class="form-group">
+                            <div id="labels">
+                                <label for="" class="form-label">Nombre de usuario</label>
+                                <br>
+                                <label for="" class="form-label">Correo electronico</label>
+                                <br>
+                                <label for="" class="form-label">Contraseña</label>
+                                <br>
+                                <label for="" class="form-label">Confirmar Contraseña</label>
+                            </div>
+                            <div id="inputs">
+                                <input type="text" class="form-control" name="Usuario" id="Usuario">
+                                <br>
+                                <input type="text" class="form-control" name="correo" id="correo">
+                                <br>
+                                <input type="password" class="form-control" name="Contraseña" id="Contraseña">
+                                <br>
+                                <input type="password" class="form-control" name="CContraseña" id="CContraseña">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <input type="submit" value="Registrar">
+            </form>
+
+        </section>
+        <br>
+        <section id="recu">
+
+        </section>
+    </div>
+</body>
+</html>
