@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%-include('partials/encabezado.html');%>
 <body>
-    
+    <%-include('partials/nav.html');%>
+    <br>
+    <section id="filtros">
+        <h4>Filtros</h4>
+        <div id="fil">
+            <div class="form-check">
+                <input type="checkbox" name="H" id="H" class="form-check-input">
+                <label for="H" class="form-check-label">Hombre</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="M" id="M" class="form-check-input">
+                <label for="M" class="form-check-label">Mujer</label>
+            </div>
+            <div class="form-range">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <%-include('partials/pie.html');%>
 </body>
 </html>

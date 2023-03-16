@@ -1,31 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
     <%-include('partials/encabezado.html');%>
-<body>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /> 
+
+    </head>
+    <style>
+        .carousel-control-prev i,
+        .carousel-control-next i{
+        color: black;
+        font-size: 50px;
+        }
+        #pp{
+        width: 80%;
+        height: 80%;
+        box-shadow: 0 0 4px grey;
+        padding: 15px;
+        }
+        #pp img{
+            height: 300px;
+            width: auto;
+        }
+        button{
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        border:none;
+        }
+        button:hover{
+        opacity: 0.8;
+        }
+    </style>
+<body >
     <%-include('partials/nav.html');%>
     <br>
-    <br>
-    <div class="container">
+    <div class="cuerpo">
         <section id="destacado">
             <h5>Productos destacados</h5>
             <br>
             <br>
-            <div id="produc">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
                 <center>
-                    <img src="./img/disfraz1.jpg" alt="">
-                    <h3>Descripcion</h3>
-                    <a href="">$00.00</a>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div>
+                      <div id="produc">
+                        <div id="pp">
+                        <center>
+                            <img src="./img/disfraz1.jpg" alt="">
+                            <h3>Descripcion</h3>
+                            <a href="">$00.00</a>
+                            <br>
+                            <button>Agregar al carrito</button>
+                        </center>
+                        <br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div>
+                        <div id="produc">
+                          <div id="pp">
+                          <center>
+                              <img src="https://http2.mlstatic.com/D_NQ_NP_800474-MLM41888963125_052020-W.jpg" alt="">
+                              <h3>Descripcion</h3>
+                              <a href="">$00.00</a>
+                              <br>
+                              <button>Agregar al carrito</button>
+                          </center>
+                          <br>
+                          </div>
+                        </div>
+                      </div>                  </div>
+                  <div class="carousel-item">
+                    <div>
+                        <div id="produc">
+                          <div id="pp">
+                          <center>
+                              <img src="https://m.media-amazon.com/images/I/51M5G9MJt0L._AC_SX425_.jpg" alt="">
+                              <h3>Descripcion</h3>
+                              <a href="">$00.00</a>
+                              <br>
+                              <button>Agregar al carrito</button>
+                          </center>
+                          <br>
+                          </div>
+                        </div>
+                      </div>                  </div>
+                </div>
                 </center>
-            </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left"></i>
+                  <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right"></i>
+                  <span class="sr-only">Siguiente</span>
+                </a>
+              </div>
         </section>
         <section id="informacion">
+            <center>
             <h5 class="texto">¡TODOS LOS NIÑOS QUE HAN COMPRADO HAN SONREÍDO!</h5>
 
             <p class="texto">
-                Te garantizamos que no te arrepentirás de comprarle un disfraz a tus pequeños, <br>
+                Te garantizamos que no te arrepentirás de comprarle un disfraz a tus pequeños,
                 contamos con mucha variedad de disfraces para la temporada que se aproxima.
             </p>
+            <p class="texto">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                 Explicabo voluptas ad illo eum atque amet at vitae iste?
+                 Excepturi quae rem aspernatur libero adipisci quaerat,  
+                 cupiditate nihil quas id earum?
+            </p>
+            </center> <br>
+            <br>
+            <section id="prod">
+                <h4>
+                    Disfraces nuevos para este halloween
+                </h4>
+                <div id="nuevos">
+                    <div id="producN">
+                        <center>
+                            <img src="./img/disfraz1.jpg" alt="">
+                            <h3>Descripcion</h3>
+                            <a href="">$00.00</a>
+                        </center>
+                    </div>
+                    <div id="producN">
+                        <center>
+                            <img src="./img/disfraz1.jpg" alt="">
+                            <h3>Descripcion</h3>
+                            <a href="">$00.00</a>
+                        </center>
+                    </div>
+                    <div id="producN">
+                        <center>
+                            <img src="./img/disfraz1.jpg" alt="">
+                            <h3>Descripcion</h3>
+                            <a href="">$00.00</a>
+                        </center>
+                    </div>
+                </div>
+            </section> 
         </section>
+        
     </div>
+    <br>
+    <%-include('partials/pie.html');%>
 </body>
 </html>

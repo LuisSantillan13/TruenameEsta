@@ -47,7 +47,15 @@ app.get('/contacto', (req,res)=>{
 })
 app.get('/login', (req,res)=>{
 
-    res.render('login.html', {titulo:"Inicia sesion", encabezado:"⚡Inicio de sesion"})
+    res.render('login.html', {titulo:"Inicia sesion", encabezado:"Inicio de sesion"})
+})
+app.get('/registro', (req,res)=>{
+
+    res.render('registro.html', {titulo:"Registro", encabezado:"Registrate"})
+})
+app.get('/recu', (req,res)=>{
+
+    res.render('recu.html', {titulo:"Recuperar", encabezado:"Recuperar contraseña"})
 })
 const servidor = http.createServer((req, res)=>{
 
