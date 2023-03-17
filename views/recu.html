@@ -35,13 +35,13 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Nueva contraseña">
+                            <input type="password" class="form-control" placeholder="Nueva contraseña" onkeyup="validar()" name="contra" id="contra">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Confirmar nueva contraseña">
+                            <input type="password" class="form-control" placeholder="Confirmar nueva contraseña" onkeyup="validar()" name="ccontra" id="ccontra">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Recuperar" class="btn float-right login_btn">
@@ -52,4 +52,17 @@
         </div>
     </div>
 </body>
+<script>
+    function validar(){
+        let contra = document.getElementById('contra');
+        let ccontra = document.getElementById('ccontra');
+
+        if(ccontra.value==contra.value){
+            ccontra.style.border='3px solid green';
+        }else{
+            ccontra.style.border='3px solid red';
+        }
+        
+    };
+</script>
 </html>
