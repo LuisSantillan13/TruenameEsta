@@ -34,7 +34,7 @@ app.get('/info', (req,res)=>{
             titulo:"Nosotros"
     }
 
-    res.render('info.html', valores)
+    res.render('Nosotros.html', valores)
 })
 app.get('/contacto', (req,res)=>{
 
@@ -68,7 +68,7 @@ const servidor = http.createServer((req, res)=>{
     }else if(req.url === '/productos'){
         
     }else if(req.url === '/info'){
-
+        res.render('Nosotros.html', {encabezado:'Sobre nosotros'});
     }else if(req.url ==='/contacto'){
         
     }

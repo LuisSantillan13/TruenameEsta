@@ -29,59 +29,59 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre">
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Apellidos">
+                            <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" id="apellidos">
                             
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-home"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Direccion">
+                            <input type="text" class="form-control" placeholder="Direccion de domicilio" name="domicilio" id="domicilio">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
                             </div>
-                            <input type="number" class="form-control" placeholder="Telefono">
+                            <input type="number" class="form-control" placeholder="Telefono" name="telefono" id="telefono">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Usuario">
+                            <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario">
                             
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-at"></i></span>
                             </div>
-                            <input type="email" class="form-control" placeholder="Correo">
+                            <input type="email" class="form-control" placeholder="example@gmail.com" name="correo" id="correo">
                             
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Contraseña">
+                            <input type="password" class="form-control" placeholder="Contraseña" onkeyup="validar()" name="contra" id="contra">
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i><i class="fa fa-check"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Confirmar Contraseña">
+                            <input type="password" class="form-control" placeholder="Confirmar Contraseña" onkeyup="validar()" name="ccontra" id="ccontra">
                             
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Registro" class="btn float-right login_btn">
                         </div>
                     </form>
-                        <br>
+                        <br> <br>
                         <h4 style="color:white; text-align: center;">Registrate con</h4>
                         <div class="d-flex justify-content-center social_icon">
                             <span><i class="fab fa-facebook-square"></i></span>
@@ -94,4 +94,17 @@
         </div>
     </div>
 </body>
+<script>
+    function validar(){
+        let contra = document.getElementById('contra');
+        let ccontra = document.getElementById('ccontra');
+
+        if(ccontra.value==contra.value){
+            ccontra.style.border='3px solid green';
+        }else{
+            ccontra.style.border='3px solid red';
+        }
+        
+    };
+</script>
 </html>

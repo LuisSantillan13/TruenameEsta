@@ -3,7 +3,7 @@
 html,body{
 background-image: url('https://i.pinimg.com/originals/ae/7d/00/ae7d00b7d2d1204e61a264a86c79c1e5.jpg');
 background-size: cover;
-background-repeat: no-repeat;
+background-repeat: repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
 }
