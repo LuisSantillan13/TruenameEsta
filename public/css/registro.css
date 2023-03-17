@@ -83,3 +83,8 @@ color: white;
 .links a{
 margin-left: 4px;
 }
+#telefono::-webkit-inner-spin-button,
+#telefono::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin:0;
+}
