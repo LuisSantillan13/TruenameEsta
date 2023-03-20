@@ -3,23 +3,75 @@
     <%-include('partials/encabezado.html');%>
 <body>
     <%-include('partials/nav.html');%>
-    <br>
-    <section id="filtros">
-        <h4>Filtros</h4>
-        <div id="fil">
-            <div class="form-check">
-                <input type="checkbox" name="H" id="H" class="form-check-input">
-                <label for="H" class="form-check-label">Hombre</label>
+    <div class="wrap">
+        <h1>Escoge un disfraz</h1>
+        <div class="store-wrapper">
+            <div class="category_list">
+                <a href="#" class="category_item" category="all">Todo</a>
+                <a href="#" class="category_item" category="bebes">Bebes</a>
+                <a href="#" class="category_item" category="niño">Niños</a>
+                <a href="#" class="category_item" category="niña">Niñas</a>
+                <a href="#" class="category_item" category="hombre">Hombres</a>
+                <a href="#" class="category_item" category="mujer">Mujeres</a>
             </div>
-            <div class="form-check">
-                <input type="checkbox" name="M" id="M" class="form-check-input">
-                <label for="M" class="form-check-label">Mujer</label>
-            </div>
-            <div class="form-range">
+            <section class="products-list">
+                <div class="product-item" category="bebes">
+                    <img src="./img/DisfrazBebe1.jpg" alt="" >
+                    <p class="descripcion">Bebe banana</p>
+                    <span class="precio">$ 400</span>
+                </div>
+                <div class="product-item" category="bebes" >
+                    <img src="./img/DisfrazBebe2.jpg" alt="" >
+                    <p class="descripcion">Bebe prisionero</p>
+                    <span class="precio">$ 400</span>
+                </div>
+                <div class="product-item" category="niño">
+                    <img src="./img/DisfrazNiño1.jpg" alt="" >
+                    <a href="#">Niño paleta</a>
+                    <span class="precio">$ 600</span>
+                </div>
+                <div class="product-item" category="niño">
+                    <img src="./img/DisfrazNiño2.jpg" alt="" >
+                    <a href="#">Niño elefante</a>
+                    <span class="precio">$ 600</span>
+                </div>
+                <div class="product-item" category="niña">
+                    <img src="./img/DisfrazNiña1.jpg" alt="" >
+                    <a href="#">Niña avioneta</a>
+                    <span class="precio">$ 600</span>
+                </div>
+                <div class="product-item" category="niña">
+                    <img src="./img/DisfrazNiña2.jpg" alt="" >
+                    <a href="#">Niña elmo</a>
+                    <span class="precio">$ 600</span>
+                </div>
+                <div class="product-item" category="hombre">
+                    <img src="./img/DisfrazHombre1.jpg" alt="" >
+                    <a href="#">Hombre santa</a>
+                    <span class="precio">$ 1000</span>
+                </div>
+                <div class="product-item" category="hombre">
+                    <img src="./img/DisfrazHombre2.jpg" alt="" >
+                    <a href="#">Hombre delfin</a>
+                    <span class="precio">$ 1200</span>
+                </div>
+                <div class="product-item" category="mujer">
+                    <img src="./img/DisfrazMujer1.jpg" alt="" >
+                    <a href="#">Tinkerbell</a>
+                    <span class="precio">$ 1200</span>
+                </div>
+                <div class="product-item" category="mujer">
+                    <img src="./img/DisfrazMujer2.jpg" alt="" >
+                    <a href="#">Policia sexy</a>
+                    <span class="precio">$ 1200</span>
+                </div>
                 
-            </div>
+               <!-- Contenedor -->
+
+
+            </section>
         </div>
-    </section>
+    </div>
 
 
     <br>
