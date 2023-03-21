@@ -1,3 +1,13 @@
+
+let carrito = [];
+
+function agregarAlCarrito(descripcion, precio) {
+	carrito.push({descripcion: descripcion, precio: precio});
+	console.log(carrito);
+	alert("Producto agregado al carrito.");
+}
+
+
 var filters = [];
 $(document).ready(function(){
 
@@ -37,26 +47,61 @@ $(document).ready(function(){
 		});
 	  
 		// OCULTANDO PRODUCTOS =========================
-		$('.product-item').css('transform', 'scale(0)');
+		$('.item').css('transform', 'scale(0)');
 		function hideProduct(){
-		  $('.product-item').hide();
+		  $('.item').hide();
 		} setTimeout(hideProduct,400);
 	  
 		// MOSTRANDO PRODUCTOS =========================
 		function showProduct(){
 		  if (catSelected.length === 0) {
 			// Si no se ha seleccionado ninguna categoría, muestra todos los productos
-			$('.product-item').show();
-			$('.product-item').css('transform', 'scale(1)');
+			$('.item').show();
+			$('.item').css('transform', 'scale(1)');
 		  } else {
 			// Muestra los productos que pertenecen a cualquier categoría seleccionada
 			catSelected.forEach(function(cat){
-			  $('.product-item[category="'+cat+'"]').show();
-			  $('.product-item[category="'+cat+'"]').css('transform', 'scale(1)');
+			  $('.item[category="'+cat+'"]').show();
+			  $('.item[category="'+cat+'"]').css('transform', 'scale(1)');
 			});
 		  }
 		} setTimeout(showProduct,400);
 	  });
   });
 
+ 
+
+
+  function cargar(elemento) {
+	// Obtener los datos del producto seleccionado
+	var imagen = elemento.querySelector('img').src;
+	var nombre = elemento.querySelector('.descripcion').textContent;
+	var precio = elemento.querySelector('.precio').textContent;
+	var stock = elemento.dataset.stock;
   
+	// Mostrar la ventana emergente con los datos del producto
+	document.querySelector('.popup-image').src = imagen;
+	document.querySelector('.popup-name').textContent = nombre;
+	document.querySelector('.popup-price').textContent = precio;
+	document.querySelector('.popup-stock').textContent = 'Existencia: ' + stock;
+	document.querySelector('.popup-container').style.display = 'block';
+  
+	// Agregar evento click para agregar al carrito
+	document.querySelector('.popup-add').addEventListener('click', function() {
+	  var talla = document.querySelector('.popup-size').value;
+	  if (talla) {
+		// Agregar el producto al carrito con la talla seleccionada
+		// ...
+		console.log('Producto agregado al carrito:', nombre, talla);
+		// Cerrar la ventana emergente
+		document.querySelector('.popup-container').style.display = 'none';
+	  } else {
+		alert('Por favor selecciona una talla.');
+	  }
+	});
+ 
+  
+	document.querySelector('.popup-close').addEventListener('click', function() {
+		document.querySelector('.popup-container').style.display = 'none';
+	});
+}
